@@ -14,6 +14,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Symlinks
 ############
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+ln -s /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh $HOME/.oh-my-zsh/custom/
+
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
